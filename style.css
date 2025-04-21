@@ -1,0 +1,185 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background: linear-gradient(135deg, #101820, #1c1c1e);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 15px;
+  }
+  
+  /* Container */
+  .container {
+    background: #2c2f33;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00ffc8;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: #00ffd0;
+  }
+  
+  /* Info Box */
+  .info-box {
+    background: #3a3d41;
+    padding: 15px;
+    border-left: 4px solid #00ffc8;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Form Step */
+  .form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .form-step.active {
+    display: block;
+  }
+  
+  /* Labels & Inputs */
+  label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #eeeeee;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="range"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    background-color: #45494d;
+    color: #ffffff;
+    resize: vertical;
+  }
+  
+  input[type="range"] {
+    appearance: none;
+    height: 6px;
+    background: #00ffc8;
+    margin-top: 10px;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  /* Navigation Buttons */
+  button {
+    background-color: #00ffc8;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 5px 0 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00d6a8;
+  }
+  
+  /* Fade animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  
+  /* Slider container */
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .slider-container span {
+    font-size: 14px;
+    color: #eee;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 6px;
+    background: #00ffc8;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="range"]:focus {
+    background: #00ffd0;
+  }
+  
+  /* Styling for the range thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  input[type="range"]:hover::-webkit-slider-thumb {
+    background: #00d6a8;
+  }
+  

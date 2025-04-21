@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JGVRP | Staff Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="staffForm" action="submit-form.php" method="POST">
+      <h1>JGVRP | Staff Application</h1>
+      <p class="info-box">
+        You may not use any online sources for this application.<br>
+        You must have the Public Services & Premium Customization gamepass.<br>
+        You must have enough funds for a GV private server & cannot take a LOA during your MIT process.<br>
+        You have 2 weeks to complete your MIT guide upon your hire date. After you pass, you will have 2 weeks to complete your individual quota to get to the Moderator stage.<br><br>
+        <strong>Note:</strong> If your application lacks complete sentences & good detail, it will be declined.
+      </p>
+
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <h2>Section 1</h2>
+        <label>Discord Username*<br>
+          <input type="text" name="discord_username" required>
+        </label>
+
+        <label>Discord ID*<br>
+          <input type="text" name="discord_id" required>
+        </label>
+
+        <label>Past experiences as a staff member in other servers (Optional):<br>
+          <textarea name="past_experience"></textarea>
+        </label>
+
+        <button type="button" class="next">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <h2>Section 2</h2>
+
+        <label>Why are you interested in becoming a staff member here?*<br>
+          <textarea name="interest_reason" required></textarea>
+        </label>
+
+        <label>What are your plans to contribute within the staff team here?*<br>
+          <textarea name="contribution_plans" required></textarea>
+        </label>
+
+        <label>What are some good qualities/strengths/characteristics that you have?*<br>
+          <textarea name="qualities" required></textarea>
+        </label>
+
+        <label>What makes you stand out amongst other applicants?*<br>
+          <textarea name="standout" required></textarea>
+        </label>
+
+        <label>How active are you within the community?*<br>
+            <div class="slider-container">
+              <span>Not Active</span>
+              <input type="range" name="activity" min="1" max="10" step="1" required>
+              <span>Active</span>
+            </div>
+          </label>
+          
+
+        <div class="form-nav">
+          <button type="button" class="prev">Previous</button>
+          <button type="button" class="next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step">
+        <h2>Section 3</h2>
+
+        <label>How would you handle a stressful situation?*<br>
+          <textarea name="stress_response" required></textarea>
+        </label>
+
+        <label>What would you do if you see drama in any of the chatrooms?*<br>
+          <textarea name="drama_response" required></textarea>
+        </label>
+
+        <label>What will you do if you see a leaker in your session?*<br>
+          <textarea name="leaker_response" required></textarea>
+        </label>
+
+        <div class="form-nav">
+          <button type="button" class="prev">Previous</button>
+          <button type="button" class="next">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="form-step">
+        <h2>Section 4</h2>
+
+        <label>Do you agree to be placed as a Moderator In Training if you pass?*<br>
+          <select name="agree_mit" required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+          </select>
+        </label>
+
+        <label>Do you agree to complete the MIT guide within 2 weeks?*<br>
+          <select name="agree_guide" required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+          </select>
+        </label>
+
+        <label>Do you agree not to request funds or a LOA as MIT?*<br>
+          <select name="agree_no_funds_loa" required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+          </select>
+        </label>
+
+        <label>Do you agree to manage your time for quotas (3-7 hours bi-weekly)?*<br>
+          <select name="agree_time_management" required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+          </select>
+        </label>
+
+        <label>Please sign with your Roblox username*<br>
+          <input type="text" name="roblox_username" required>
+        </label>
+
+        <div class="form-nav">
+          <button type="button" class="prev">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
