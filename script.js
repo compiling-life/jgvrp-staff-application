@@ -58,5 +58,27 @@ inputs.forEach(input => {
   });
 });
 
+document.getElementById("staffForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Stop default form submit
+  
+    const form = event.target;
+    const formData = new FormData(form);
+  
+    // Send the data using fetch to Formspree
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+  
+    if (response.ok) {
+      window.location.href = "thank-you.html"; // Redirect to your thank-you page
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  });  
+
 // Initialize
 showStep(currentStep);
