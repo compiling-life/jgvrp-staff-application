@@ -58,36 +58,5 @@ inputs.forEach(input => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("staffForm");
-  
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault(); // Stop normal form submission
-  
-      const formData = new FormData(form);
-  
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-  
-        if (response.ok) {
-          form.reset(); // Clear form inputs
-          window.location.href = "thank-you.html"; // Go to your custom page
-        } else {
-          alert("Something went wrong. Please try again.");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        alert("There was a problem submitting your form.");
-      }
-    });
-  });
-  
-
 // Initialize
 showStep(currentStep);
