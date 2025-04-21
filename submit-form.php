@@ -1,9 +1,17 @@
 <?php
 // Define the file path for the CSV file where responses will be stored
+var_dump($_POST);
+die(); 
 $file = 'responses.csv';
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    // Debugging: Print out the values
+    echo "Discord Username: " . $_POST['discord_username'] . "<br>";
+    echo "Discord ID: " . $_POST['discord_id'] . "<br>";
+    echo "Past Experience: " . $_POST['past_experience'] . "<br>";
+    // Continue echoing out all other fields for debugging...
     
     // Get the form data
     $discord_username = htmlspecialchars($_POST['discord_username']);
@@ -50,14 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         fclose($handle);
     }
 
-    // Optional: Send a confirmation email
-    // Uncomment the lines below to send a confirmation email (change the email to yours)
-    // $to = "your-email@example.com";
-    // $subject = "JGVRP Staff Application Submission";
-    // $message = "A new application has been submitted.\n\nDetails:\n\nDiscord Username: $discord_username\nDiscord ID: $discord_id";
-    // $headers = "From: no-reply@example.com";
-    // mail($to, $subject, $message, $headers);
-    
     // Redirect user to a "Thank You" page (optional)
     header('Location: thank-you.html');
     exit;
