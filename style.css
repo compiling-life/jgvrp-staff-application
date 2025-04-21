@@ -33,20 +33,20 @@ h1
 font-size: 26px;
 margin-bottom: 20px;
 text-align: center;
-color: #00ffc8;
+color: #fa9907;
 }
 
 h2 
 {
 margin-bottom: 15px;
-color: #00ffd0;
+color: #fa9907;
 }
 
 .info-box 
 {
 background: #3a3d41;
 padding: 15px;
-border-left: 4px solid #00ffc8;
+border-left: 4px solid #fa9907;
 margin-bottom: 25px;
 font-size: 14px;
 line-height: 1.6;
@@ -91,7 +91,7 @@ input[type="range"]
 {
 appearance: none;
 height: 6px;
-background: #00ffc8;
+background: #fa9907;
 margin-top: 10px;
 }
 
@@ -102,7 +102,7 @@ min-height: 100px;
 
 button 
 {
-background-color: #00ffc8;
+background-color: #fa9907;
 color: #000000;
 border: none;
 padding: 10px 20px;
@@ -116,7 +116,7 @@ transition: background-color 0.3s ease;
 
 button:hover 
 {
-background-color: #00d6a8;
+background-color: #fa9907;
 }
 
 @keyframes fadeIn 
@@ -167,7 +167,7 @@ transition: background 0.3s ease;
 
 input[type="range"]:focus 
 {
-background: #00ffd0;
+background: #fa9907;
 }
 
 input[type="range"]::-webkit-slider-thumb 
@@ -193,5 +193,5 @@ cursor: pointer;
 
 input[type="range"]:hover::-webkit-slider-thumb 
 {
-background: #00d6a8;
+background: #fa9907;
 }
