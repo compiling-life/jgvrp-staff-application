@@ -159,7 +159,7 @@ input[type="range"]
 appearance: none;
 width: 80%;
 height: 6px;
-background: #00ffc8;
+background: #fa9907;
 border-radius: 5px;
 outline: none;
 transition: background 0.3s ease;
@@ -193,5 +193,5 @@ cursor: pointer;
 
 input[type="range"]:hover::-webkit-slider-thumb 
 {
-background: #fa9907;
+background: #49738b;
 }
