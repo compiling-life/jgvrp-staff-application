@@ -58,27 +58,36 @@ inputs.forEach(input => {
   });
 });
 
-document.getElementById("staffForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Stop default form submit
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("staffForm");
   
-    const form = event.target;
-    const formData = new FormData(form);
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault(); // Stop normal form submission
   
-    // Send the data using fetch to Formspree
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          form.reset(); // Clear form inputs
+          window.location.href = "thank-you.html"; // Go to your custom page
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("There was a problem submitting your form.");
       }
     });
+  });
   
-    if (response.ok) {
-      window.location.href = "thank-you.html"; // Redirect to your thank-you page
-    } else {
-      alert("Oops! Something went wrong. Please try again.");
-    }
-  });  
 
 // Initialize
 showStep(currentStep);
