@@ -65,4 +65,9 @@ inputs.forEach(input => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("staffForm").reset();
+});
+
+
 showStep(currentStep);
